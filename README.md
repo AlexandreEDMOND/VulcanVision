@@ -36,3 +36,6 @@
 
 ### Exploration rapide des données
 - Lancer `python3 scripts/explore_dataset.py` pour générer `analysis/readme.md` avec les observations (comptes d’ids, cohérence fichiers, formes des volumes).
+
+### Notebook de baseline (torch)
+- `notebooks/baseline_unet3d.ipynb` : entraînement d’un petit UNet 3D sur un échantillon de patches + split interne train/val/test, métriques proches compétition (SurfaceDice/VOI) sur val et test internes, visualisation des courbes de loss, puis inférence sur le `test_images` officiel pour générer `submission.zip`. Ajuste patch_size, nb d’ids, epochs et stride pour un vrai run GPU. Cellule d’install incluse (`pip install ...` si besoin).
